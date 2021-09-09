@@ -7,25 +7,25 @@ const Info = (props) => {
     const convertDate = (date) => {
         let myDate = date.split("-");
         let newDate = new Date(myDate);
-        let dateInSeconds = (new Date(newDate).getTime() / 1000);
+        let dateInSeconds = (new Date(newDate).getTime());
         return dateInSeconds;
     }
-    
+
     const toNewDate = (date) => {
-        let newDate = date * 1000
+        let newDate = date
         newDate = new Date(newDate)
         return newDate.toDateString()
     }
     // Add a million seconds to user birthday
     const addMillion = (date) => {
         let dateInSeconds = date
-        dateInSeconds = dateInSeconds + 1000000
+        dateInSeconds = dateInSeconds + 1000000000
         return dateInSeconds
     }
     // add a billion seconds to user birthday
     const addBillion = (date) => {
         let dateInSeconds = date
-        dateInSeconds = dateInSeconds + 1000000000
+        dateInSeconds = dateInSeconds + 1000000000000
         return dateInSeconds
     }
 
